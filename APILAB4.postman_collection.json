@@ -1,0 +1,197 @@
+{
+	"info": {
+		"_postman_id": "1290a344-12f8-4244-abc7-90c0874ac74c",
+		"name": "APILAB4",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Part 1",
+			"item": [
+				{
+					"name": "Punto 4",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/cinemas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cinemas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Punto 5 ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/cinemas/cinemaX",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cinemas",
+								"cinemaX"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Punto 5 (unexist Cinema name)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/cinemas/cmko",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cinemas",
+								"cmko"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Punto 6",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/cinemas/cinemaX/2018-12-18 15:30",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cinemas",
+								"cinemaX",
+								"2018-12-18 15:30"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Punto 6 (Error)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/cinemas/cinemAX//2018-12-18 15:31",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cinemas",
+								"cinemAX",
+								"",
+								"2018-12-18 15:31"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Punto 7",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/cinemas/cinemaX/2018-12-18 15:30/The Night",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cinemas",
+								"cinemaX",
+								"2018-12-18 15:30",
+								"The Night"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Punto 7 (Error)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/cinemas/cinX/2018-12-18 15:30/The Night",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cinemas",
+								"cinX",
+								"2018-12-18 15:30",
+								"The Night"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Part 2",
+			"item": [
+				{
+					"name": "Punto 1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"movie\": {\r\n        \"name\": \"Truman show2\",\r\n        \"genre\": \"Comedy\"\r\n    },\r\n    \"seats\": [\r\n        [\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true\r\n        ],\r\n        [\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true\r\n        ],\r\n        [\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true\r\n        ],\r\n        [\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true\r\n        ],\r\n        [\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true\r\n        ],\r\n        [\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true\r\n        ],\r\n        [\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true\r\n        ]\r\n    ],\r\n    \"date\": \"2018-12-18 15:30\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/cinemas/cinemaX",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cinemas",
+								"cinemaX"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

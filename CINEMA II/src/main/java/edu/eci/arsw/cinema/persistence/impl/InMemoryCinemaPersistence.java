@@ -1,23 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package edu.eci.arsw.cinema.persistence.impl;
 
-import edu.eci.arsw.cinema.model.Cinema;
-import edu.eci.arsw.cinema.model.CinemaFunction;
-import edu.eci.arsw.cinema.model.Movie;
-import edu.eci.arsw.cinema.persistence.CinemaException;
-import edu.eci.arsw.cinema.persistence.CinemaPersistenceException;
-import edu.eci.arsw.cinema.persistence.CinemaPersitence;
+import edu.eci.arsw.cinema.model.*;
+import edu.eci.arsw.cinema.persistence.*;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
-
 import java.util.*;
 
 /**
- *
  * @author cristian
  */
 @Component
@@ -36,7 +25,7 @@ public class InMemoryCinemaPersistence implements CinemaPersitence{
         functions.add(funct2);
         Cinema c=new Cinema("cinemaX",functions);
         cinemas.put("cinemaX", c);
-
+        //Creacion cinema 2
         String functionDate1 = "2020-12-18 20:30";
         List<CinemaFunction> functions1= new ArrayList<>();
         CinemaFunction funct12 = new CinemaFunction(new Movie("Fast&Furious5","Action"),functionDate1);
@@ -49,7 +38,6 @@ public class InMemoryCinemaPersistence implements CinemaPersitence{
 
     @Override
     public void buyTicket(int row, int col, String cinema, String date, String movieName) throws CinemaException {
-
         Cinema c = getCinema(cinema);
         if(c!=null) {
             boolean notfounded = true;
@@ -62,7 +50,6 @@ public class InMemoryCinemaPersistence implements CinemaPersitence{
                     notfounded = false;
                 }
             }
-
             if(notfounded) {
                 throw new CinemaException("Movie,Date or Position non-existent");
             }
@@ -83,7 +70,6 @@ public class InMemoryCinemaPersistence implements CinemaPersitence{
                     listc.add(function);
                 }
             }
-
             return listc;
         }else {
             return null;
@@ -102,7 +88,6 @@ public class InMemoryCinemaPersistence implements CinemaPersitence{
                     listc.add(function);
                 }
             }
-
             return listc;
         }else {
             return null;
@@ -143,6 +128,16 @@ public class InMemoryCinemaPersistence implements CinemaPersitence{
                 }
             }
         }else{
+            throw new CinemaException("Unexistent cinema");
+        }
+    }
+
+    @Override
+    public void setFunction(String cinema, CinemaFunction cinemaFunction) throws CinemaException {
+        Cinema cine = getCinema(cinema);
+        if (cinemaFunction != null){
+            cine.setFunctions(cinemaFunction);
+        }else {
             throw new CinemaException("Unexistent cinema");
         }
     }

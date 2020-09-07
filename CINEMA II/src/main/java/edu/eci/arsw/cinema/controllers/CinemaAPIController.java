@@ -1,25 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package edu.eci.arsw.cinema.controllers;
 
-import java.util.ArrayList;
-import java.util.LinkedHashSet;
-import java.util.Set;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
-import edu.eci.arsw.cinema.model.Cinema;
-import edu.eci.arsw.cinema.model.CinemaFunction;
-import edu.eci.arsw.cinema.persistence.CinemaException;
-import edu.eci.arsw.cinema.services.CinemaServices;
-import edu.eci.arsw.cinema.services.CinemaServicesInterface;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
+import java.util.logging.*;
+import edu.eci.arsw.cinema.model.*;
+import edu.eci.arsw.cinema.persistence.*;
+import edu.eci.arsw.cinema.services.*;
+import org.springframework.beans.factory.annotation.*;
+import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -43,7 +29,7 @@ public class CinemaAPIController {
             return new ResponseEntity<>(cinemaServices.getAllCinemas(), HttpStatus.ACCEPTED);
         } catch (CinemaException ex) {
             Logger.getLogger(CinemaAPIController.class.getName()).log(Level.SEVERE, null, ex);
-            return new ResponseEntity<>("Error bla bla bla",HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>(ex.getMessage(),HttpStatus.NOT_FOUND);
         }
     }
 
@@ -89,12 +75,18 @@ public class CinemaAPIController {
             return new ResponseEntity<>(HttpStatus.CREATED);
         } catch (CinemaException ex) {
             Logger.getLogger(CinemaAPIController.class.getName()).log(Level.SEVERE, null, ex);
-            return new ResponseEntity<>("Error bla bla bla",HttpStatus.FORBIDDEN);
+            return new ResponseEntity<>(ex.getMessage(),HttpStatus.FORBIDDEN);
         }
-
     }
 
-
-
-    
+    @RequestMapping (value = "/{name}", method = RequestMethod.PUT)
+    public ResponseEntity<?> manejadorPutRecursoXX(@PathVariable String name, @RequestBody CinemaFunction cinemaFunction){
+        try {
+            cinemaServices.setFunction (name, cinemaFunction);
+            return new ResponseEntity<>(HttpStatus.CREATED);
+        }catch (CinemaException ex) {
+            Logger.getLogger(CinemaAPIController.class.getName()).log(Level.SEVERE, null, ex);
+            return new ResponseEntity<>(ex.getMessage(), HttpStatus.BAD_REQUEST);
+        }
+    }
 }

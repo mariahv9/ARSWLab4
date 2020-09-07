@@ -1,24 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package edu.eci.arsw.cinema.persistence;
 
-import edu.eci.arsw.cinema.model.Cinema;
-import edu.eci.arsw.cinema.model.CinemaFunction;
-
-import java.util.List;
-import java.util.Set;
+import edu.eci.arsw.cinema.model.*;
+import java.util.*;
 
 /**
- *
  * @author cristian
  */
 public interface CinemaPersitence {
     
     /**
-     * 
      * @param row the row of the seat
      * @param col the column of the seat
      * @param cinema the cinema's name
@@ -69,5 +59,6 @@ public interface CinemaPersitence {
     public Set<Cinema> getAllCinema() throws CinemaException;
 
     public void addFunction(String cinema, CinemaFunction cinemaFunction) throws CinemaException;
-    
+
+    public void setFunction (String cinema, CinemaFunction cinemaFunction) throws CinemaException;
 }

@@ -1,0 +1,17 @@
+Condiciones de Carrera:
+ * Si algún usuario consulta la clase cinema o atributos de esta mientras otro usuario hace una
+   adición de cinema, se podrá generar una excepción ya que la consulta se corrompió.
+ * Mientras algún usuario hace la modificación de algún cinema, otro usuario está consultando,
+   en este caso se generarán excepciones ya que la clase ha sido modificada.
+ * Si dos usuarios están realizando compras de tiquetes simultáneas, pueden comprar el mismo
+   asiento en la misma función.
+
+Regiones Críticas:
+ * El acceso a la lista de funciones del cine.
+ * El acceso a la disponibilidad de asientos de la fnción.
+ * El acceso a las consultas de los cinemas.
+
+Solución Planteada:
+ * Crear un CopyOnWriteArrayList para lista de funciones del cine y asientos de cada función.
+ * Realizar bloqueos de actualizaciones si se está usando la consulta.
+ * Realizar bloqueos de consultas si se están realizando actualizaciones.

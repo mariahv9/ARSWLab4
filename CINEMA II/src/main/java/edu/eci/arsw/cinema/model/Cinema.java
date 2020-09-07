@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package edu.eci.arsw.cinema.model;
 
 import java.util.List;
@@ -13,9 +8,9 @@ import java.util.List;
  */
 public class Cinema {
     private String name;
-    private List<CinemaFunction> functions; 
-    
-    
+
+    private List<CinemaFunction> functions;
+
     public Cinema(){}
     
     public Cinema(String name,List<CinemaFunction> functions){
@@ -33,6 +28,10 @@ public class Cinema {
 
     public List<CinemaFunction> getFunctions() {
         return this.functions;
+    }
+
+    public void setFunctions(CinemaFunction cinemaFunction) {
+        this.functions = functions;
     }
 
     public void addFunctions(CinemaFunction cinemaFunction){

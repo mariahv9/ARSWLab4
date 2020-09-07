@@ -1,27 +1,13 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package edu.eci.arsw.cinema.services;
 
-import edu.eci.arsw.cinema.filters.Filter;
-import edu.eci.arsw.cinema.filters.GenreFilter;
-import edu.eci.arsw.cinema.filters.SeatsFilter;
-import edu.eci.arsw.cinema.model.Cinema;
-import edu.eci.arsw.cinema.model.CinemaFunction;
-import edu.eci.arsw.cinema.persistence.CinemaException;
-import edu.eci.arsw.cinema.persistence.CinemaPersistenceException;
-import edu.eci.arsw.cinema.persistence.CinemaPersitence;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
+import edu.eci.arsw.cinema.filters.*;
+import edu.eci.arsw.cinema.model.*;
+import edu.eci.arsw.cinema.persistence.*;
+import org.springframework.beans.factory.annotation.*;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 /**
- *
  * @author cristian
  */
 
@@ -38,7 +24,6 @@ public class CinemaServices implements CinemaServicesInterface{
     @Autowired
     @Qualifier(a)
     Filter filter;
-    
 
     /**
      *
@@ -79,17 +64,14 @@ public class CinemaServices implements CinemaServicesInterface{
         } catch (CinemaPersistenceException e) {
             throw new CinemaException(e.getMessage());
         }
-
     }
 
     /**
-     *
      * @param row row of the seats
      * @param col col of the seats
      * @param cinema cinema's name
      * @param date movie's date
      * @param movieName movie's name
-     *
      */
     public void buyTicket(int row, int col, String cinema, String date, String movieName){
         try {
@@ -97,12 +79,9 @@ public class CinemaServices implements CinemaServicesInterface{
         }catch (CinemaException ce){
             System.out.println(ce.toString());
         }
-
     }
 
-
     /**
-     *
      * @param cinema cinema's name
      * @param date movie's date
      * @return All functions of the given cinema's name
@@ -117,7 +96,6 @@ public class CinemaServices implements CinemaServicesInterface{
     }
 
     /**
-     *
      * @param c cinema's instance
      * @param date movie's date
      * @param genre movie's genre
@@ -128,7 +106,6 @@ public class CinemaServices implements CinemaServicesInterface{
     }
 
     /**
-     *
      * @param c cinema's instance
      * @param date movie's date
      * @param x amount expected of seats in the movie
@@ -153,7 +130,6 @@ public class CinemaServices implements CinemaServicesInterface{
         cps.addFunction(cinema, cinemaFunction);
     }
 
-
     public void filterChange(String fil){
         if(a!=fil) {
             if(fil=="filterOfSeats") {
@@ -162,5 +138,10 @@ public class CinemaServices implements CinemaServicesInterface{
                 filter = new GenreFilter();
             }
         }
+    }
+
+    @Override
+    public void setFunction(String cinema, CinemaFunction cinemaFunction) throws CinemaException {
+        cps.setFunction(cinema, cinemaFunction);
     }
 }

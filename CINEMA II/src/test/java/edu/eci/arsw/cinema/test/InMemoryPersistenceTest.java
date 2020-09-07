@@ -1,26 +1,13 @@
 package edu.eci.arsw.cinema.test;
 
-import edu.eci.arsw.cinema.model.Cinema;
-import edu.eci.arsw.cinema.model.CinemaFunction;
-import edu.eci.arsw.cinema.model.Movie;
-import edu.eci.arsw.cinema.persistence.CinemaException;
-import edu.eci.arsw.cinema.persistence.CinemaPersistenceException;
+import edu.eci.arsw.cinema.model.*;
+import edu.eci.arsw.cinema.persistence.*;
 import edu.eci.arsw.cinema.persistence.impl.InMemoryCinemaPersistence;
 import org.junit.Test;
-
-import java.util.ArrayList;
-import java.util.List;
-
+import java.util.*;
 import static org.junit.Assert.*;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
- *
  * @author cristian
  */
 public class InMemoryPersistenceTest {
@@ -122,9 +109,6 @@ public class InMemoryPersistenceTest {
             fail("An exception was expected after saving a second cinema with the same name");
         }
         catch (CinemaPersistenceException ex){
-            
         }
-                
-        
     }
 }

@@ -1,0 +1,29 @@
+
+^
+java:S4488<"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(²£¢¢
+A
+java:S14522"&Remove usage of generic wildcard type.(çÛÇÓûÿÿÿÿ
+<
+java:S1452'"&Remove usage of generic wildcard type.(ç„–ª
+j
+java:S4488T"HReplace "@RequestMapping(method = RequestMethod.PUT)" with "@PutMapping"(ƒõ¸üÿÿÿÿ8Ç›÷ÊÆ.
+Z
+java:S1128"=Remove this unused import 'edu.eci.arsw.cinema.model.Cinema'.(ÿÉÎÖ8Ç›÷ÊÆ.
+<
+java:S1452"&Remove usage of generic wildcard type.(Èà¶ù
+c
+java:S4488&"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(¸¡´Œÿÿÿÿÿ
+]
+java:S44881"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(€½˜
+H
+java:S1452U"&Remove usage of generic wildcard type.(òò–Íüÿÿÿÿ8ôıÊÆ.
+;
+java:S1452="&Remove usage of generic wildcard type.(áÕº
+<
+java:S1452I"&Remove usage of generic wildcard type.(•İŸ¸
+`
+java:S4488H"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(™²ì
+j
+java:S1192-"ODefine a constant instead of duplicating this literal "Error HTTP 404" 3 times.(ëıúôıÿÿÿÿ
+^
+java:S4488"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(Æøîç

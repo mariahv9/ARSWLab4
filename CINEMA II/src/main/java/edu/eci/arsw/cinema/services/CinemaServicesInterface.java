@@ -1,11 +1,8 @@
 package edu.eci.arsw.cinema.services;
 
-import edu.eci.arsw.cinema.model.Cinema;
-import edu.eci.arsw.cinema.model.CinemaFunction;
+import edu.eci.arsw.cinema.model.*;
 import edu.eci.arsw.cinema.persistence.CinemaException;
-
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public interface CinemaServicesInterface {
 
@@ -27,4 +24,5 @@ public interface CinemaServicesInterface {
 
     public void addFunction(String cinema, CinemaFunction cinemaFunction) throws CinemaException;
 
+    void setFunction(String cinema, CinemaFunction cinemaFunction) throws CinemaException;
 }
