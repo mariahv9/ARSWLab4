@@ -52,9 +52,9 @@ Del anterior diagrama de componentes (de alto nivel), se desprendió el siguient
 3. Teniendo en cuenta el nombre del cine, la fecha y hora de la función y el nombre de la película, verifique que el mismo se pueda obtener mediante una petición GET al recurso '/cinemas/{name}/{date}/{moviename}' correspondiente.
 4. Agregue soporte al verbo PUT para los recursos de la forma '/cinemas/{name}', de manera que sea posible actualizar una función determinada, el servidor se encarga de encontrar la función correspondiente y actualizarla o crearla.
 
-´´´
+```
 $ curl -i -X POST -HContent-Type:application/json -HAccept:application/json http://localhost:8080/cinemas -d '{cinePolis}'
-´´´
+```
 
 ![put](https://github.com/mariahv9/ARSWLab4/blob/master/CINEMA%20II/img/put.png)
 
