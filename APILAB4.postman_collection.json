@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "1290a344-12f8-4244-abc7-90c0874ac74c",
+		"_postman_id": "9128021d-6ece-4518-a0b4-3e4afac9d342",
 		"name": "APILAB4",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -184,6 +184,36 @@
 							"path": [
 								"cinemas",
 								"cinemaX"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Punto 4",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"movie\": {\r\n        \"name\": \"Truman show2\",\r\n        \"genre\": \"Comedy\"\r\n    },\r\n    \"seats\": [\r\n        [\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true\r\n        ],\r\n        [\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true\r\n        ],\r\n        [\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true\r\n        ],\r\n        [\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true\r\n        ],\r\n        [\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true\r\n        ],\r\n        [\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true\r\n        ],\r\n        [\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true,\r\n            true\r\n        ]\r\n    ],\r\n    \"date\": \"2018-12-18 15:30\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/cinemas/cinePolis/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cinemas",
+								"cinePolis",
+								""
 							]
 						}
 					},
