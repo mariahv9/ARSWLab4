@@ -1,0 +1,27 @@
+
+;
+java:S1452;"&Remove usage of generic wildcard type.(·’∫
+<
+java:S1452%"&Remove usage of generic wildcard type.(ÁÑñ™
+<
+java:S1452"&Remove usage of generic wildcard type.(»‡∂˘
+<
+java:S1452G"&Remove usage of generic wildcard type.(ï›ü∏
+c
+java:S4488R"HReplace "@RequestMapping(method = RequestMethod.PUT)" with "@PutMapping"(Ééı∏¸ˇˇˇˇ
+j
+java:S1192+"ODefine a constant instead of duplicating this literal "Error HTTP 404" 3 times.(Î˝˙Ù˝ˇˇˇˇ
+^
+java:S4488"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(∆¯ÓÁ
+]
+java:S4488/"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ÄΩò
+A
+java:S14520"&Remove usage of generic wildcard type.(Á€«”˚ˇˇˇˇ
+c
+java:S4488$"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(∏°¥åˇˇˇˇˇ
+A
+java:S1452S"&Remove usage of generic wildcard type.(ÚÚñÕ¸ˇˇˇˇ
+^
+java:S4488:"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(≤£¢¢
+`
+java:S4488F"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ôç≤Ï
